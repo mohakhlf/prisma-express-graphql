@@ -31,4 +31,11 @@ export default {
         return user
     },
 
+    profile: async () => {
+        const profile = await prisma.profile
+            .findMany()
+        return profile
+
+    }
+
 }

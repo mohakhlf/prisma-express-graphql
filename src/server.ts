@@ -33,6 +33,9 @@ app.get('/post', async (req , res,next) => {
 app.get('/user', async (req , res, next) => {
     const user = await Prisma.user()
     res.send(user), next})
+app.get('/profile', async (req , res, next) => {
+    const profile = await Prisma.profile()
+    res.send(profile), next})
 
 
 app.listen( port, () => {
